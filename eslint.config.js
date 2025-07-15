@@ -32,11 +32,12 @@ export default defineConfig([
       react,         // 👈 Add this
       reactHooks,
     },
-    rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }], ...js.configs.recommended.rules,
-...react.configs.recommended.rules,
-...react.configs['jsx-runtime'].rules, 'no-unused-vars': 'warn', //this changes the error to a warning
-        'react/prop-types': 'off',
-    },
+   rules: {
+  ...js.configs.recommended.rules,
+  ...react.configs.recommended.rules,
+  ...react.configs['jsx-runtime'].rules,
+  'no-unused-vars': 'warn',
+  'react/prop-types': 'off',
+},
   },
 ])
