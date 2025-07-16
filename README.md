@@ -10,12 +10,27 @@ A simple and clean Todo List application built with  **HTML**, **React JS**,  an
 
 ### Steps:
 
-1. **Clone the repository**
+Follow these steps to get the project up and running on your local machine:
 
-2. **Install Dependencies**
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/ErmatovRustam/todo-list.git](https://github.com/ErmatovRustam/todo-list.git)
+    ```
+2.  **Navigate to the project directory:**
+    ```bash
+    cd todo-list
+    ```
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+4.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+    This command will typically open the application in your browser at `http://localhost:5173` (or a similar port).
 
-3. **Run Development Server**
-
+---
 
 ## 🚀 Features
 
