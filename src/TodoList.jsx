@@ -5,16 +5,10 @@ function ToDoList(){
     { id: 3, title: 'Share with friends', completed: false }
   ]
     return(
-         <ul>
-        {
-          todos.map((el) =>{
-            return(
-              <li key = {el.id}>
-                {el.title}
-              </li>
-            )
-          })
-        }
+      <ul>
+        {todos.map(el=> (
+          <li key = {el.id}>{el.title}</li>
+        ))}
       </ul>
     )
 }
