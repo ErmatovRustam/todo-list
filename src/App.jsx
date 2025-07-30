@@ -4,12 +4,12 @@ import ToDoList from './TodoList'
 import ToDoForm from './ToDoForm'
 
 function App() {
-  const [todos, setTodos] = useState(" STUDYYYY");  
+  const [newTodo, setNewTodo] = useState('new task');
   return (
     <div>
       <h1>ToDo List</h1>
       <ToDoForm />
-      <p>{todos}</p>
+      <p>{newTodo}</p>
       <ToDoList />
 
     </div>
