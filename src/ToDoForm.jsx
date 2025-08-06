@@ -1,9 +1,31 @@
-function ToDoForm() {
+import React, { useRef } from 'react';
+
+function ToDoForm({ onAddTodo }) {
+  const todoTitleInput = useRef(null);
+
+  function handleAddTodo(event) {
+    event.preventDefault();
+
+    const title = event.target.title.value;
+    if (!title.trim()) return; 
+
+    onAddTodo(title);
+
+    event.target.title.value = "";  
+    todoTitleInput.current.focus(); 
+  }
+
   return (
-    <form >
-        <label htmlFor="todoTitle">TODO</label>
-      <input type="text" id = "todoTitle" />
-      <button type="submit"> Add Todo</button>
+    <form onSubmit={handleAddTodo}>
+      <label htmlFor="todoTitle">TODO</label>
+      <input
+        type="text"
+        id="todoTitle"
+        name="title"
+        placeholder="Enter todo..."
+        ref={todoTitleInput}  
+      />
+      <button type="submit">Add Todo</button>
     </form>
   );
 }
