@@ -4,16 +4,24 @@ import ToDoList from './TodoList'
 import ToDoForm from './ToDoForm'
 
 function App() {
-  const [newTodo, setNewTodo] = useState('new task');
+  const [todoList, setTodoList] = useState([]);
+
+  const addTodo = (title) => {
+    const newTodo = {
+      id: Date.now(),
+      title: title
+    };
+    setTodoList([...todoList, newTodo]);
+  };
+
   return (
     <div>
       <h1>ToDo List</h1>
-      <ToDoForm />
-      <p>{newTodo}</p>
-      <ToDoList />
-
+      <ToDoForm onAddTodo={addTodo} />
+      <ToDoList todoList={todoList} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
+

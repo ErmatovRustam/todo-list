@@ -29,7 +29,7 @@ export default defineConfig([
       },
     },
      plugins: {
-      react,         // 👈 Add this
+      react,      
       reactHooks,
     },
    rules: {
